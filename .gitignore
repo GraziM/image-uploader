@@ -219,7 +219,6 @@ package-lock.json
 
 webpack-stats.json
 frontend/static/js/**
-frontend/static/css/**
 
 *.sublime*
 

@@ -1,10 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
+import Uploader from './Uploader'
 
 function App(){
     return(
-        <div>
-            Olá :)
+        <div className="app">
+            <Uploader />
         </div>
     )
 }

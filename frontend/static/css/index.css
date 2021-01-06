@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 1.5em 1em;
+
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgb(201, 201, 201);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2, .container span {
+    margin: 5px 0px;
+}
+
+.container p{
+    color: rgb(235, 65, 65);
+}
+
+.drop-zone{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #b9edf7;
+
+}
+
+.Upload-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    margin: 5px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(22, 140, 209);
+    cursor: pointer;
+}
+
