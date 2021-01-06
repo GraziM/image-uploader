@@ -207,6 +207,9 @@ dmypy.json
 
 # profiling data
 
+## DJANGO ##
+migrations/
+
 ### react ###
 .DS_*
 logs
