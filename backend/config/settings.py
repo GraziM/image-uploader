@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import django_heroku
 import os
 from pathlib import Path
 
@@ -29,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://imgsuploader.herokuapp.com/"]
 
 
 # Application definition
@@ -129,6 +130,8 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(FRONTEND_DIR, 'static')]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BACKEND_DIR, 'static')
+
+django_heroku.settings(locals())
 
 try:
     from .local_settings import *
