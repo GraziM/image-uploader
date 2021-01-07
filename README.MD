@@ -1,6 +1,6 @@
 # IMAGE UPLOADER feito com Djando e React
 
-Sistema simples upload de imagens. Projeto desenvolvido com o intuito de aprender mais sobre o framework flask.
+Sistema simples upload de imagens. Projeto desenvolvido com o intuito de aprender mais sobre o framework Django e React.
 
 ## Para rodar o sistema
 
