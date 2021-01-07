@@ -118,11 +118,6 @@
     align-items: center;
 }
 
-progress{
-    width: 90%;
-    height: auto;
-}
-
 .success-form{
     display: flex;
     flex-direction: column;
