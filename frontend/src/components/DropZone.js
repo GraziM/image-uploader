@@ -21,6 +21,8 @@ function DropZone(props){
         if (files.length > 0){
             if(!props.validator(files[0])){
                 props.error("Invalid file type")
+            } else {
+                props.handleFile(files[0])
             }
         }
     }
@@ -32,7 +34,6 @@ function DropZone(props){
             onDragleave={handleDragLeave}
             onDrop={handleDrop}
         >
-            {file ? file.name : ''}
         </div>
     )
 }

@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function UploadButton(){
-    const [file, setFile] = useState(null)
+function UploadButton(props){
 
-    const handleChange = () => {
-
+    const handleChange = (e) => {
+        props.handleFile(e.target.files[0]);
     }
 
     return(

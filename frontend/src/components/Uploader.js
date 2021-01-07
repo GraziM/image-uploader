@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import DropZone from './DropZone'
 import UploadButton from './UploadButton'
 
-function Uploader(){
+function Uploader(props){
     const [errorMessage, setErrorMessage] = useState(null)
 
     const handleError = (message) => {
@@ -23,8 +23,8 @@ function Uploader(){
             <h2>Upload your image</h2>
             <span>File should be Jpeg, Jpg, Png or Gif</span>
             <p>{errorMessage ? errorMessage : ""}</p>
-            <DropZone validator={validateFile} error={handleError}/>
-            <UploadButton validator={validateFile} error={handleError}/>
+            <DropZone validator={validateFile} error={handleError} handleFile={props.handleFile}/>
+            <UploadButton validator={validateFile} error={handleError} handleFile={props.handleFile}/>
         </div>
     );
 }
