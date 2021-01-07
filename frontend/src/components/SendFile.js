@@ -17,7 +17,6 @@ function SendFile(props){
         }
         axios.post(url, formData, config)
             .then((response) => {
-                console.log(response)
                 props.handleFile(null);
                 props.handleSuccess(true, response.data.image);
             })
@@ -30,7 +29,8 @@ function SendFile(props){
 
     return(
         
-        <div>
+        <div className="container">
+            <h6>Uploading...</h6>
             <progress value={progress} max="100"/>
         </div>
     )

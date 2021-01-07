@@ -8,11 +8,20 @@ function DropZone(props){
 
     const handleDragEnter = (e) => {
         e.preventDefault();
+        console.log()
+        e.target.classList.add("hover")
+    }
+
+    const handleDragExit = (e) => {
+        e.preventDefault();
+        console.log(e)
+        e.target.classList.remove("hover")
     }
 
     const handleDragLeave = (e) => {
         e.preventDefault();
-
+        console.log(e)
+        e.target.classList.remove("hover")
     }
 
     const handleDrop = (e) => {
@@ -20,7 +29,7 @@ function DropZone(props){
         const files = e.dataTransfer.files;
         if (files.length > 0){
             if(!props.validator(files[0])){
-                props.error("Invalid file type")
+                props.error(true)
             } else {
                 props.handleFile(files[0])
             }
@@ -32,8 +41,11 @@ function DropZone(props){
             onDragOver={handleDragOver}
             onDragEnter={handleDragEnter}
             onDragleave={handleDragLeave}
+            onDragExit={handleDragExit}
             onDrop={handleDrop}
         >
+            <i className="material-icons">get_app</i>
+            <p className="drop-text">Choose a file or drag it here</p>
         </div>
     )
 }

@@ -3,10 +3,10 @@ import DropZone from './DropZone'
 import UploadButton from './UploadButton'
 
 function Uploader(props){
-    const [errorMessage, setErrorMessage] = useState(null)
+    const [error, setError] = useState(null)
 
-    const handleError = (message) => {
-        setErrorMessage(message)
+    const handleError = (value) => {
+        setError(value)
     }
 
     const validateFile = (file) => {
@@ -22,8 +22,9 @@ function Uploader(props){
         <div className="container">
             <h2>Upload your image</h2>
             <span>File should be Jpeg, Jpg, Png or Gif</span>
-            <p>{errorMessage ? errorMessage : ""}</p>
+            <p className={error ? "error" : "error hide"}>Invalid file type</p>
             <DropZone validator={validateFile} error={handleError} handleFile={props.handleFile}/>
+            <p>or</p>
             <UploadButton validator={validateFile} error={handleError} handleFile={props.handleFile}/>
         </div>
     );

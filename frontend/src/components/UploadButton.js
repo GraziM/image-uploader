@@ -3,7 +3,11 @@ import React from 'react'
 function UploadButton(props){
 
     const handleChange = (e) => {
-        props.handleFile(e.target.files[0]);
+        if (!props.validator(e.target.files[0])){
+            props.error(true)
+        } else {
+            props.handleFile(e.target.files[0]);
+        }
     }
 
     return(
