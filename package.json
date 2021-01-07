@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "start": "webpack --mode development",
-    "build": "webpack --mode production"
+    "dev": "cd frontend && webpack --mode development --watch",
+    "start": "cd frontend && webpack --mode development",
+    "build": "cd frontend && webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -16,14 +16,14 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"
   }
 }
