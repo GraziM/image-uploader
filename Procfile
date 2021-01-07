@@ -1,1 +1,2 @@
-web: gunicorn backend.config.wsgi
+release: python3 backend/manage.py migrate
+web: gunicorn backend.config:config
